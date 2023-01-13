@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "b2591715-0aa0-4dc9-9810-234d91d4bf37",
+		"name": "TEST_MOBILKUCOM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "birthdate",
+							"value": "10 Feb 1999",
+							"type": "default"
+						},
+						{
+							"key": "phone",
+							"value": "6285736237224",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "Bekasi",
+							"type": "default"
+						},
+						{
+							"key": "education",
+							"value": "s1",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/home/kifeb/Pictures/bgno.png"
+						},
+						{
+							"key": "name",
+							"value": "Aku",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:{{PORT}}/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{PORT}}/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{PORT}}/api/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "PORT",
+			"value": "5000"
+		}
+	]
+}
