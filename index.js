@@ -16,6 +16,12 @@ app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.use('/assets', express.static('public/images'))
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        msg: "Welcome to My API"
+    })
+})
+
 // Routes for user
 app.use("/api/user", userRoutes);
 
