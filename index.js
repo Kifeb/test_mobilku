@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 app.use('/assets', express.static('public/images'))
 
 // Routes for user
-app.use("/user", userRoutes);
+app.use("/api/user", userRoutes);
 
 app.use((err, req, res, next) => {
     res.json({
