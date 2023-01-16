@@ -10,6 +10,6 @@ const router = express.Router();
 router.get("/", getUsers);
 router.get("/:id", getUserById);
 router.post("/", upload.single("photo"), resizePhoto, validate(userSchema), createUser);
-router.put("/:id", upload.single("photo"), resizePhoto, updateUser);
+router.put("/:id", upload.single("photo"), resizePhoto, validate(userSchema), updateUser);
 
 export default router

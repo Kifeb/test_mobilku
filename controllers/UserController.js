@@ -56,6 +56,7 @@ export const updateUser = async (req, res) => {
     if(!req.file) return res.status(422).json({msg: "image must be uploaded"})
 
     const {name, birthdate, age, phone, city, education} = req.body;
+    const date = new Date(birthdate)
     const photo = req.file.path;
 
     try {
@@ -65,7 +66,7 @@ export const updateUser = async (req, res) => {
             },
             data: {
                 name,
-                birthdate,
+                birthdate: date,
                 age: parseInt(age),
                 phone,
                 city,
